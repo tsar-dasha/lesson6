@@ -3,11 +3,6 @@ package tests;
         import org.junit.jupiter.api.Test;
         import pages.FillForm;
 
-        import static com.codeborne.selenide.Condition.appear;
-        import static com.codeborne.selenide.Condition.text;
-        import static com.codeborne.selenide.Selectors.byText;
-        import static com.codeborne.selenide.Selenide.*;
-
 public class FillFormObjectsTests extends TestBase {
 
     FillForm fillForm = new FillForm();
