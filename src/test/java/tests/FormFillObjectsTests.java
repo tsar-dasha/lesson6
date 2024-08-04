@@ -1,11 +1,11 @@
 package tests;
 
-        import org.junit.jupiter.api.Test;
-        import pages.FillForm;
+import org.junit.jupiter.api.Test;
+import pages.FormFill;
 
-public class FillFormObjectsTests extends TestBase {
+public class FormFillObjectsTests extends TestBase {
 
-    FillForm fillForm = new FillForm();
+    FormFill fillForm = new FormFill();
 
     @Test
     void fillFormTest() {
@@ -14,7 +14,7 @@ public class FillFormObjectsTests extends TestBase {
                 .setFirstName("Dasha")
                 .setLastName("Tsareva")
                 .setGender("Female")
-                .setUserNumber("8999123456")
+                .setMobile("8999123456")
                 .clickSubmit()
                 .checkResults("Student Name", "Dasha Tsareva")
                 .checkResults("Gender", "Female")
@@ -30,10 +30,10 @@ public class FillFormObjectsTests extends TestBase {
                 .setLastName("Tsareva")
                 .setEmail("12345@mail.ru")
                 .setGender("Female")
-                .setUserNumber("8999123456")
+                .setMobile("8999123456")
                 .setDateOfBirth("09", "July", "2022")
                 .setSubject("Maths")
-                .setHobbies("Music")
+                .setHobby("Music")
                 .setPictureUpload("student.jpg")
                 .setAddress("City")
                 .setState("NCR")
@@ -60,6 +60,6 @@ public class FillFormObjectsTests extends TestBase {
                 .setEmail("12345mail.ru")
                 .setGender("Female")
                 .clickSubmit()
-                .checkErrorMail();
+                .checkNoTable();
     }
 }
